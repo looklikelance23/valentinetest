@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine’s Day Proposal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://www.example.com/romantic-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #FF69B4;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin: 20px;
+        }
+        button:hover {
+            background-color: #FF1493;
+        }
+        .message {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will You Be My Valentine?</h1>
+    <p>Valentine’s Day is here! What better way to ask your special someone to be yours?</p>
+
+    <!-- Button to create the message -->
+    <button onclick="generateMessage()">Create My Valentine’s Message</button>
+
+    <!-- The generated message will appear here -->
+    <div id="message" class="message"></div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Need more inspiration? Check out our <a href="https://www.example.com" target="_blank" style="color: #FF69B4;">Valentine's Playlist</a></p>
+        <p>Follow us on <a href="https://twitter.com" target="_blank" style="color: #FF69B4;">Twitter</a></p>
+    </footer>
+
+    <script>
+        function generateMessage() {
+            var name = prompt("Enter your name:");
+            var crushName = prompt("Enter their name:");
+
+            if (name && crushName) {
+                var message = `Dear ${crushName},\n\nThis Valentine's Day, I want to be more than just friends. Would you be my Valentine?\n\n- ${name}`;
+                document.getElementById("message").innerText = message;
+            } else {
+                alert("Please provide both your name and their name!");
+            }
+        }
+    </script>
+
+</body>
+</html>
